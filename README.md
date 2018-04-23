@@ -1,3 +1,3 @@
 # sell-script-all
-sell-script-check status of netowrk also status of http web site and https 
+sell-script-check status of network also status of http web site and https 
 
