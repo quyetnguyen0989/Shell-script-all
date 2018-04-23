@@ -18,6 +18,7 @@
   down7="Lease line 10.100.78.181 is Down"
   down8="tms.titancorpvn.com is Down"
   down9="tis.titancorpvn.com is Down"
+  https="https://tis.titancorpvn.com"
 
 
    if ping -I 172.16.10.2 google.com -c 3 >/dev/null; then
@@ -76,8 +77,9 @@
            echo $down8  > /home/quyetnguyen/Tms
    fi
 
-  curl -s --head  --request GET http://tis.titancorpvn.com/ > web9.txt
-    if  cat /home/quyetnguyen/web9.txt | grep "200 OK" ; then
+  status=`curl $https -k -s -f -o /dev/null && echo "OK" || echo "ERROR"`
+    echo "testing $https=$status" > web9.txt
+    if  cat /home/quyetnguyen/web9.txt | grep "OK" ; then
            
            echo $up9  > /home/quyetnguyen/Tis
    else
@@ -87,5 +89,5 @@
   echo `date` > Time; 
 	tail -vn +1 Time Mindgeek-5th-floor-Viettel MI Titan-and-Auvenir Server-routing-out-Main-VNPT-FTTH Lease-line-1 Lease-line-36 Lease-line-181 Tms Tis  > sentmail.txt
  
-	cat /home/quyetnguyen/sentmail.txt | mail -s "Report Daily of Router GW-PRI-01" quyetnguyen@gmail.com
+	cat /home/quyetnguyen/sentmail.txt | mail -s "Report Daily of Router GW-PRI-01" quyetnguyen0989@gmail.com
  exit 0
