@@ -99,5 +99,5 @@
    fi
  	
 	cd /home/quyetnguyen/files/ && tail -vn +1 Time Sum Subnet-172.16.10.0-Viettel Subnet-172.16.11.0-VNPT Subnet-172.16.12.0-VNPT Subnet-192.168.1.0-VNPT Lease-line-1 Lease-line-36 Lease-line-181 Tms Tis  > /home/quyetnguyen/sentmail.txt	
-    	cat /home/quyetnguyen/sentmail.txt | mail -s "Report Network Daily" it@titancorpvn.com
+    	cat /home/quyetnguyen/sentmail.txt | mail -s "Report Network Daily" quyetnguyen0989@gmail.com
  exit 0
