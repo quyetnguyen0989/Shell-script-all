@@ -59,6 +59,37 @@ printf "Untar many tar.gz"
     do
     tar xvzf $i
     done
+    
+printf "convert all avi to mp4 format\n"
+    for i in *.avi
+    do
+    ffmpeg -i "$i" "${i%.avi}.mp4"
+    done
+
+printf "convert all flac to mp3\n"
+    for i in *.flac
+    do
+    flac -c -d "$i" | lame -m -j -b 192 -s 44.1 - "$i%.flac.mp3"    
+
+printf "Search log file for errors\n"
+    v="/var/log"
+    for i in $v/messages $v/kern.log $v/syslog
+    do
+    echo "Processing $i, please wait.."
+    echo "-----[Start: $i @ $(date)]---" >> /tmp/error.log
+    egrep -i 'warn|error|critical' "$i" >> /tmp/error.log
+    echo "---[End: $i @ $(date)]---" >> /tmp/error.log
+    done
+
+printf "Print uptime list linux\n"
+    servers="kirk-app"
+    for s in $servers
+    do
+    echo "$s"
+    ssh ${s} uptime
+    done
+
+    
 
 #https://www.cyberciti.biz/faq/bash-for-loop/
 #https://www.youtube.com/watch?v=ocXb3qeg7Es&feature=youtu.be
