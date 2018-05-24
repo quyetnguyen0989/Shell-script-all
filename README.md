@@ -4,4 +4,4 @@
 - Operations two number
 - Use function operations two numbers [function_operations_two_numbers.sh	](function_operations_two_numbers.sh	)
 
-Owner By [a link] (https://github.com/quyetnguyen0989/)
+# Owner By [quyetnguyen0989] (https://github.com/quyetnguyen0989/)
