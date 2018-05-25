@@ -89,6 +89,27 @@ printf "Print uptime list linux\n"
     ssh ${s} uptime
     done
 
+printf "Print list file in folder and make color of key words\n"
+    r="/bin"
+    for f in $(ls $r)
+    do
+    file "$r/$f" | egrep -i --color 'sell|bash|python|perl'
+    done
+
+printf "Show detail which web server domain use\n"
+    cat domain.txt
+    for d in $(cat domain.txt)
+    do
+    curl -o /tmp/file -Il $d &>/dev/null
+    echo "$d runs on web-$(grep 'Server' /tmp/file)"
+    done    
+
+printf "Check string have exits in the file\n"
+    files=(resolv.conf hosts nixcraft.jail version)
+    for f in "${files[@]}"
+    do
+    [ -f "/etc/$f" ] && echo "$f found." || echo "$f not found."
+    done
     
 
 #https://www.cyberciti.biz/faq/bash-for-loop/
