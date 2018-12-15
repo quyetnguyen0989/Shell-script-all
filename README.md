@@ -3,7 +3,7 @@
 - [Install docker and docker-compose](install-docker-docker-compose.sh)
 - [Operations two number](operations-twos-num.sh)
 - [Use function operations two numbers](function_operations_two_numbers.sh	)
-
+- [Shutdown server when ip host lost, case we use ups](shutdown-when-lost-host.sh )
  
  
  
