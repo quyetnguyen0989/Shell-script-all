@@ -1,5 +1,5 @@
-# Sell-script-all
-- [Sell-script-check status of network also status of http web site and https](check-network.sh)
+# Shell-script-all
+- [Shell-script-check status of network also status of http web site and https](check-network.sh)
 - [Install docker and docker-compose](install-docker-docker-compose.sh)
 - [Operations two number](operations-twos-num.sh)
 - [Use function operations two numbers](function_operations_two_numbers.sh	)
