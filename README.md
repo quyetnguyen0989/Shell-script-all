@@ -4,7 +4,9 @@
 - [Operations two number](operations-twos-num.sh)
 - [Use function operations two numbers](function_operations_two_numbers.sh	)
 - [Shutdown server when route lost, case we use ups](shutdown-when-lost-host.sh )
+- [monitor get info floder and send to hook](monitor.py)
 -  while true; do ping -c1 www.google.com > /dev/null && break; done
+
 
  
  
