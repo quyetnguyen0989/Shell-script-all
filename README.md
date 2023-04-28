@@ -6,7 +6,10 @@
 - [Shutdown server when route lost, case we use ups](shutdown-when-lost-host.sh )
 - [monitor get info floder and send to hook](monitor.py)
 -  while true; do ping -c1 www.google.com > /dev/null && break; done
-
+```
+pip install pyautogui
+pip install time
+```
 
  
  
